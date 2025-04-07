@@ -1,8 +1,7 @@
---[[
- conky-weather-lua display.lua   
- by @wim66    
-  v1.1 8-June-2024       
-]]
+-- conky-weather-lua display.lua   
+-- by @wim66
+-- April 7 2025   
+
 -- Import the required Cairo libraries
 require 'cairo'
 require 'cairo_xlib'
@@ -10,7 +9,7 @@ require 'cairo_xlib'
 -- Functie om de weergegevens te lezen en te parsen
 local function read_weather_data()
     local weather_data = {}
-    local weather_file = "./resources/weather_data"
+    local weather_file = "./resources/weather_data.txt"
     local file = io.open(weather_file, "r")
 
     if not file then
@@ -75,12 +74,12 @@ function conky_draw_weather()
     local cr = cairo_create(cs)
 
     -- Teken de afbeelding met Cairo
-    draw_image(cr, weather_icon_path, 20, 20, 120, 120)
+    draw_image(cr, weather_icon_path, 0, 0, 120, 120)
 
     -- Teken de teksten met Cairo
-    draw_text(cr, city, 160, 110, "ChopinScript", 72, {1, 0.4, 0, 1})
+    draw_text(cr, city, 120, 110, "ChopinScript", 72, {1, 0.4, 0, 1})
     draw_text(cr, weather_desc, 100, 160, "Dejavu Serif", 22, {249, 168, 0, 1})
-    draw_text(cr, temp, 430, 70, "Dejavu Serif", 22, {249, 168, 0, 1})
+    draw_text(cr, temp, 410, 80, "Dejavu Serif", 22, {249, 168, 0, 1})
     -- draw_text(cr, "Luchtvochtigheid: " .. humidity .. "%", 100, 110, "Dejavu Sans Mono", 22, {1, 0.4, 0, 1})
     -- draw_text(cr, "Wind snelheid: " .. wind_speed .. " m/s", 100, 140, "Dejavu Sans Mono", 22, {1, 0.4, 0, 1})
 
