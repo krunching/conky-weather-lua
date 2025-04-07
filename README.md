@@ -39,7 +39,7 @@ Adjust the following settings in `settings.lua`:
 
 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/wim66/conky-weather-lua/blob/main/LICENSE) file for details.
 
 ---
 
