@@ -5,6 +5,7 @@
 ]]
 -- Import the required Cairo libraries
 require 'cairo'
+require 'cairo_xlib'
 
 -- Functie om de weergegevens te lezen en te parsen
 local function read_weather_data()
