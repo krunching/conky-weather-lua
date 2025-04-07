@@ -1,8 +1,49 @@
 # conky-weather-lua
 
-Change these settings in "settings.lua"
+A weather widget for Conky, written in Lua.
 
-<p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/Change-settings.png" alt="image"></p>
+## Features
+
+- Displays current weather conditions
+- Customizable via `settings.lua`
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/wim66/conky-weather-lua.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd conky-weather-lua
+   ```
+
+3. Edit the `settings.lua` file to match your preferences.
+
+## Usage
+
+-   Start Conky with the provided start.sh:
+```bash
+sh start.sh
+```
+
+## Configuration
+
+Adjust the following settings in `settings.lua`:
+
+- `API_KEY`: Your OpenWeatherMap API key
+- `CITY_ID`: [Find it here](https://openweathermap.org/.)
+- `UNITS`: Temperature unit for the weather data
+- `LANG`: Language for weather descriptions and labels
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
 
 <p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/previews/preview1.png" alt="image"></p>
+
+<p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/Change-settings.png" alt="image"></p>
 
