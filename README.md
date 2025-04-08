@@ -1,6 +1,6 @@
 # conky-weather-lua
 
-A weather widget for Conky, written in Lua.
+A weather widget for Conky, written in Lua. (old widget in the [Releases](https://github.com/wim66/conky-weather-lua/releases) page)
 
 ## Features
 
