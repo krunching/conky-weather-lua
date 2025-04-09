@@ -29,13 +29,13 @@ local color_options = {
 }
 
 local bgcolor_options = {
-    black = { {1, 0x000000, 0.5} },
-    blue = { {1, 0x0000ba, 0.5} },
+    black = { {1, 0x000000, 0.8} },
+    blue = { {1, 0x0000ba, 0.8} },
     white = { {1, 0xffffff, 0.5} }
 }
 
 local border_color = color_options[border_COLOR] or color_options.green
-local bg_color = bgcolor_options[background_COLOR] or bgcolor_options.black
+local bg_color = bgcolor_options[bg_COLOR] or bgcolor_options.black
 
 -- === All drawable elements ===
 local boxes_settings = {
@@ -56,7 +56,7 @@ local boxes_settings = {
         centre_x = false,
         corners = {160, 0, 160, 0},  -- TL, TR, BR, BL
         rotation = 0,  -- Toegevoegd voor rotatiemogelijkheid
-        draw_me = true,
+        draw_me = false,
         linear_gradient = {5, 90, 525, 90},  -- Aangepast aan x en w
         colours = { {0, 0x000000, 0.5}, {0.3, 0x0000ba, 0.5}, {0.7, 0x0000ba, 0.5}, {1, 0x000000, 0.5} }
     },
