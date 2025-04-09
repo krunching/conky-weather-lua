@@ -56,7 +56,7 @@ local boxes_settings = {
         centre_x = false,
         corners = {160, 0, 160, 0},  -- TL, TR, BR, BL
         rotation = 0,  -- Toegevoegd voor rotatiemogelijkheid
-        draw_me = false,
+        draw_me = true,
         linear_gradient = {5, 90, 525, 90},  -- Aangepast aan x en w
         colours = { {0, 0x000000, 0.5}, {0.3, 0x0000ba, 0.5}, {0.7, 0x0000ba, 0.5}, {1, 0x000000, 0.5} }
     },

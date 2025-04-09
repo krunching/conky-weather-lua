@@ -45,5 +45,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 <p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/previews/preview1.png" alt="image"></p>
 
+<p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/previews/preview2.gif" alt="image"></p>
+
 <p align="center"> <img src="https://github.com/wim66/conky-weather-lua/blob/main/Change-settings.png" alt="image"></p>
 
