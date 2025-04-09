@@ -8,13 +8,17 @@
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 WEATHER_DATA="$SCRIPT_DIR/weather_data.txt"
 CACHE_DIR="$SCRIPT_DIR/cache"
-ICON_DIR="$SCRIPT_DIR/weather-icons/dark/SagiSan"
 
 # Load API configuration from settings.lua
+ICON_SET=$(lua -e 'require("settings"); conky_vars(); print(ICON_SET)')
 API_KEY=$(lua -e 'require("settings"); conky_vars(); print(API_KEY)')
 CITY_ID=$(lua -e 'require("settings"); conky_vars(); print(CITY_ID)')
 UNITS=$(lua -e 'require("settings"); conky_vars(); print(UNITS)')
 LANG=$(lua -e 'require("settings"); conky_vars(); print(LANG)')
+
+# Split ICON_SET into theme and set name, construct full path
+IFS='-' read -r THEME SET_NAME <<< "$ICON_SET"
+ICON_DIR="$SCRIPT_DIR/weather-icons/$(echo "$THEME" | tr '[:upper:]' '[:lower:]')/$SET_NAME"
 
 # Fetch weather data from OpenWeatherMap API
 WEATHER_RESPONSE=$(curl -s "http://api.openweathermap.org/data/2.5/weather?id=$CITY_ID&appid=$API_KEY&units=$UNITS&lang=$LANG")

@@ -3,6 +3,15 @@
 -- April 7 2025
 
 function conky_vars()
+    -- ICON_SET: Defines the weather icon set to use.
+    -- Available options:
+    --   - Dark theme sets: "Dark-dovora", "Dark-modern", "Dark-monochrome", "Dark-openweathermap", "Dark-SagiSan", "Dark-spils-icons"
+    --   - Light theme sets: "Light-dovora", "Light-modern", "Light-monochrome", "Light-openweathermap", "Light-spils-icons", "Light-vclouds"
+    -- How to change:
+    --   - Simply update the value below to one of the available options (e.g., "Light-vclouds").
+    --   - Ensure the set exists in your weather-icons directory to avoid errors.
+    ICON_SET = "Dark-SagiSan"
+
     -- API_KEY: Your OpenWeatherMap API key.
     -- How to set it up:
     -- 1. Sign up at https://openweathermap.org/ and get your free API key (e.g., "abc123def456").
@@ -24,13 +33,13 @@ function conky_vars()
     -- 2. Search for your city, e.g., "Amsterdam".
     -- 3. Check the URL in your browser, e.g., https://openweathermap.org/city/2759794.
     -- 4. The number at the end (2759794 for Amsterdam) is your CITY_ID.
-    CITY_ID = "5368361"  -- Example: Amsterdam, Netherlands
+    CITY_ID = "2759794"  -- Example: Amsterdam, Netherlands
 
     -- UNITS: Temperature unit for the weather data.
     -- Options:
     --   "metric"   - Celsius (°C)
     --   "imperial" - Fahrenheit (°F)
-    UNITS = "imperial"
+    UNITS = "metric"
 
     -- LANG: Language for weather descriptions and labels.
     -- Options: "en" (English), "nl" (Dutch), "fr" (French), "es" (Spanish), "de" (German), etc.
@@ -45,7 +54,7 @@ function conky_vars()
     -- 4. Replace "de" with your language code and update the translations.
     -- 5. Save and reload Conky to apply changes.
     -- Current supported languages: "nl", "en", "fr", "es". Fallback is English.
-    LANG = "en"
+    LANG = "nl"
 
     border_COLOR = "orange"  -- options, green, orange, blue, black, red
     bg_COLOR = "black"      -- options black, blue

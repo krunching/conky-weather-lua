@@ -3,6 +3,15 @@
 -- April 7 2025
 
 function conky_vars()
+    -- ICON_SET: Defines the weather icon set to use.
+    -- Available options:
+    --   - Dark theme sets: "Dark-dovora", "Dark-modern", "Dark-monochrome", "Dark-openweathermap", "Dark-SagiSan", "Dark-spils-icons"
+    --   - Light theme sets: "Light-dovora", "Light-modern", "Light-monochrome", "Light-openweathermap", "Light-spils-icons", "Light-vclouds"
+    -- How to change:
+    --   - Simply update the value below to one of the available options (e.g., "Light-vclouds").
+    --   - Ensure the set exists in your weather-icons directory to avoid errors.
+    ICON_SET = "Dark-SagiSan"
+
     -- API_KEY: Your OpenWeatherMap API key.
     -- How to set it up:
     -- 1. Sign up at https://openweathermap.org/ and get your free API key (e.g., "abc123def456").
