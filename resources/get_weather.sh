@@ -8,6 +8,13 @@
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 WEATHER_DATA="$SCRIPT_DIR/weather_data.txt"
 CACHE_DIR="$SCRIPT_DIR/cache"
+# Ensure cache directory exists and is valid
+if [ -z "$CACHE_DIR" ]; then
+    echo "Error: CACHE_DIR is not set!" >&2
+    exit 1
+fi
+mkdir -p "$CACHE_DIR"
+
 
 # Load API configuration from settings.lua
 ICON_SET=$(lua -e 'require("settings"); conky_vars(); print(ICON_SET)')

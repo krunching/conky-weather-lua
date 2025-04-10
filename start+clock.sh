@@ -9,5 +9,7 @@ fi
 
 # Start Conky met de juiste configuratie en log fouten
 conky -c ./conky.conf &
+sleep 2
+sh Clock/start.sh
 
 exit 0

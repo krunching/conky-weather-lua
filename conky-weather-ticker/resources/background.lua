@@ -4,7 +4,6 @@
 
 -- === Required Cairo Modules ===
 require 'cairo'
-require 'cairo_xlib'
 
 -- === Load settings.lua from parent directory ===
 local script_path = debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]]

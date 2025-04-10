@@ -3,7 +3,19 @@
 -- Fixed to combine Min and Max on one line, center all text, and ensure reliable cycling
 
 require 'cairo'
-require 'cairo_xlib'
+-- Try to require the 'cairo_xlib' module safely
+local status, cairo_xlib = pcall(require, 'cairo_xlib')
+
+if not status then
+    -- If the module is not found, fall back to a dummy table
+    -- This dummy table redirects all unknown keys to the global namespace (_G)
+    -- This allows usage of global Cairo functions like cairo_xlib_surface_create
+    cairo_xlib = setmetatable({}, {
+        __index = function(_, k)
+            return _G[k]
+        end
+    })
+end
 
 -- Global variables for label cycling and animation
 local frame_count = 0               -- Counts frames for timing (based on update_interval)

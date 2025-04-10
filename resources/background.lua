@@ -4,7 +4,6 @@
 
 -- === Required Cairo Modules ===
 require 'cairo'
-require 'cairo_xlib'
 
 -- === Load settings.lua from parent directory ===
 local script_path = debug.getinfo(1, 'S').source:match[[^@?(.*[\/])[^\/]-$]]
@@ -44,7 +43,7 @@ local boxes_settings = {
         type = "background",
         x = 5, y = 10, w = 520, h = 180,
         centre_x = false,  -- Optioneel centreren
-        corners = {160, 0, 160, 0},  -- TL, TR, BR, BL
+        corners = {160, 160, 0, 0},  -- TL, TR, BR, BL
         rotation = 0,  -- Toegevoegd voor rotatiemogelijkheid
         draw_me = true,
         colour = bg_color
@@ -65,7 +64,7 @@ local boxes_settings = {
         type = "border",
         x = 5, y = 10, w = 520, h = 180,
         centre_x = false,
-        corners = {160, 0, 160, 0},  -- TL, TR, BR, BL
+        corners = {160, 160, 00, 0},  -- TL, TR, BR, BL
         rotation = 0,  -- Toegevoegd voor rotatiemogelijkheid
         draw_me = true,
         border = 8,
