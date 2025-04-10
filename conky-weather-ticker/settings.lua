@@ -39,7 +39,7 @@ CITY_ID = "2759794"
     -- Options:
     --   "metric"   - Celsius (°C)
     --   "imperial" - Fahrenheit (°F)
-UNITS = "metric"
+UNITS = "imperial"
 
     -- LANG: Language for weather descriptions and labels.
     -- Options: "en" (English), "nl" (Dutch), "fr" (French), "es" (Spanish), "de" (German), etc.
@@ -54,9 +54,9 @@ UNITS = "metric"
     -- 4. Replace "de" with your language code and update the translations.
     -- 5. Save and reload Conky to apply changes.
     -- Current supported languages: "nl", "en", "fr", "es". Fallback is English.
-LANG = "nl"
+LANG = "en"
 
-border_COLOR = "red"
-bg_COLOR = "blue"
+border_COLOR = "0,0x390056,1.00,0.5,0xff007f,1.00,1,0x390056,1.00"
+bg_COLOR = "0x1d1e28,0.75"
 
 end

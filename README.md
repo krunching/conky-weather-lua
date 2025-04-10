@@ -32,10 +32,15 @@ sh start.sh
 
 Adjust the following settings in `settings.lua`:
 
+- these settings can be changed with the WeatherSettingsUpdater app
 - `API_KEY`: Your OpenWeatherMap API key
 - `CITY_ID`: [Find it here](https://openweathermap.org/.)
 - `UNITS`: Temperature unit for the weather data
 - `LANG`: Language for weather descriptions and labels
+-
+- these settings can be changed with the ConkyColorUpdater app
+- `border_COLOR`
+- `bg_COLOR`
 -
 - The corners of the background can be adjusted in background.lua
 

@@ -54,9 +54,9 @@ UNITS = "metric"
     -- 4. Replace "de" with your language code and update the translations.
     -- 5. Save and reload Conky to apply changes.
     -- Current supported languages: "nl", "en", "fr", "es". Fallback is English.
-LANG = "nl"
+LANG = "en"
 
-border_COLOR = "orange"
-bg_COLOR = "black"
+border_COLOR = "0,0xaa0000,1.00,0.5,0xffa5a5,1.00,1,0xaa0000,1.00"
+bg_COLOR = "0x1d1e28,0.75"
 
 end

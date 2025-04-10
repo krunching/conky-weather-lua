@@ -56,7 +56,7 @@ UNITS = "metric"
     -- Current supported languages: "nl", "en", "fr", "es". Fallback is English.
 LANG = "nl"
 
-border_COLOR = "orange"
-bg_COLOR = "black"
+border_COLOR = "0,0x0000ff,1.00,0.5,0xafcaff,1.00,1,0x0000ff,1.00"
+bg_COLOR = "0x1d1e28,0.75"
 
 end

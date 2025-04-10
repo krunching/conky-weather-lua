@@ -18,23 +18,32 @@ conky_vars()
 -- === Utility ===
 local unpack = table.unpack or unpack  -- Compatibility for Lua 5.1 and newer
 
--- === Color Definitions ===
-local color_options = {
-    green = { {0, 0x003E00, 1}, {0.5, 0x03F404, 1}, {1, 0x003E00, 1} },
-    orange = { {0, 0xE05700, 1}, {0.5, 0xFFD145, 1}, {1, 0xE05700, 1} },
-    blue = { {0, 0x0000ba, 1}, {0.5, 0x8cc7ff, 1}, {1, 0x0000ba, 1} },
-    black = { {0, 0x2b2b2b, 1}, {0.5, 0xa3a3a3, 1}, {1, 0x2b2b2b, 1} },
-    red = { {0, 0x5c0000, 1}, {0.5, 0xff0000, 1}, {1, 0x5c0000, 1} }
-}
+-- Parse a border color string like "0,0xRRGGBB,alpha,..." into a gradient table
+local function parse_border_color(border_color_str)
+    local gradient = {}
+    for position, color, alpha in border_color_str:gmatch("([%d%.]+),0x(%x+),([%d%.]+)") do
+        table.insert(gradient, {tonumber(position), tonumber(color, 16), tonumber(alpha)})
+    end
+    -- Return a default gradient if parsing fails
+    if #gradient == 3 then
+        return gradient
+    end
+    return { {0, 0x003E00, 1}, {0.5, 0x03F404, 1}, {1, 0x003E00, 1} }
+end
 
-local bgcolor_options = {
-    black = { {1, 0x000000, 0.8} },
-    blue = { {1, 0x0000ba, 0.8} },
-    white = { {1, 0xffffff, 0.5} }
-}
+-- Parse a background color string like "0xRRGGBB,alpha" into a table
+local function parse_bg_color(bg_color_str)
+    local hex, alpha = bg_color_str:match("0x(%x+),([%d%.]+)")
+    if hex and alpha then
+        return { {1, tonumber(hex, 16), tonumber(alpha)} }
+    end
+    -- Fallback to solid black if parsing fails
+    return { {1, 0x000000, 1} }
+end
 
-local border_color = color_options[border_COLOR] or color_options.green
-local bg_color = bgcolor_options[bg_COLOR] or bgcolor_options.black
+-- Read color values from settings.lua variables
+local border_color = parse_border_color(border_COLOR)
+local bg_color = parse_bg_color(bg_COLOR)
 
 -- === All drawable elements ===
 local boxes_settings = {
