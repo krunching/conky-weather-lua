@@ -3,7 +3,6 @@
 -- Adjusted to fix fade effect, improve ticker speed control, and center weather description statically above ticker
 
 require 'cairo'
-require 'cairo_xlib'
 -- Try to require the 'cairo_xlib' module safely
 local status, cairo_xlib = pcall(require, 'cairo_xlib')
 

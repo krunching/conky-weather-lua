@@ -36,6 +36,8 @@ Adjust the following settings in `settings.lua`:
 - `CITY_ID`: [Find it here](https://openweathermap.org/.)
 - `UNITS`: Temperature unit for the weather data
 - `LANG`: Language for weather descriptions and labels
+-
+- The corners of the background can be adjusted in background.lua
 
 License
 
