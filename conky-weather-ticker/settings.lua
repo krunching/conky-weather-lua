@@ -25,7 +25,7 @@ ICON_SET = "Dark-SagiSan"
     --    f. Reload the config with: source ~/.bashrc (or source ~/.zshrc for Zsh).
     -- 3. Verify it works by running: echo $OWM_API_KEY (should output your key).
     -- If the variable is not set, a default/fallback key can be provided below (optional).
-API_KEY = os.getenv("OWM_API_KEY") or "your_default_api_key_here"
+API_KEY = os.getenv("OWM_API_KEY") or "1985aeebd389e21870664f009fc29b11"
 
     -- CITY_ID: The ID of the city for which you want weather data.
     -- How to find it:
@@ -39,7 +39,7 @@ CITY_ID = "2759794"
     -- Options:
     --   "metric"   - Celsius (°C)
     --   "imperial" - Fahrenheit (°F)
-UNITS = "imperial"
+UNITS = "metric"
 
     -- LANG: Language for weather descriptions and labels.
     -- Options: "en" (English), "nl" (Dutch), "fr" (French), "es" (Spanish), "de" (German), etc.

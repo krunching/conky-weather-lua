@@ -10,7 +10,7 @@ function conky_vars()
     -- How to change:
     --   - Simply update the value below to one of the available options (e.g., "Light-vclouds").
     --   - Ensure the set exists in your weather-icons directory to avoid errors.
-ICON_SET = "Dark-SagiSan"
+ICON_SET = "Light-vclouds"
 
     -- API_KEY: Your OpenWeatherMap API key.
     -- How to set it up:
@@ -25,7 +25,7 @@ ICON_SET = "Dark-SagiSan"
     --    f. Reload the config with: source ~/.bashrc (or source ~/.zshrc for Zsh).
     -- 3. Verify it works by running: echo $OWM_API_KEY (should output your key).
     -- If the variable is not set, a default/fallback key can be provided below (optional).
-API_KEY = os.getenv("OWM_API_KEY") or "your_default_api_key_here"
+API_KEY = os.getenv("OWM_API_KEY") or "1985aeebd389e21870664f009fc29b11"
 
     -- CITY_ID: The ID of the city for which you want weather data.
     -- How to find it:
@@ -33,7 +33,7 @@ API_KEY = os.getenv("OWM_API_KEY") or "your_default_api_key_here"
     -- 2. Search for your city, e.g., "Amsterdam".
     -- 3. Check the URL in your browser, e.g., https://openweathermap.org/city/2759794.
     -- 4. The number at the end (2759794 for Amsterdam) is your CITY_ID.
-CITY_ID = "2759794"
+CITY_ID = "2877439"
 
     -- UNITS: Temperature unit for the weather data.
     -- Options:

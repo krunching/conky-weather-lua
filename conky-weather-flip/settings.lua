@@ -25,7 +25,7 @@ ICON_SET = "Dark-SagiSan"
     --    f. Reload the config with: source ~/.bashrc (or source ~/.zshrc for Zsh).
     -- 3. Verify it works by running: echo $OWM_API_KEY (should output your key).
     -- If the variable is not set, a default/fallback key can be provided below (optional).
-API_KEY = os.getenv("OWM_API_KEY") or "your_default_api_key_here"
+API_KEY = os.getenv("OWM_API_KEY") or "1985aeebd389e21870664f009fc29b11"
 
     -- CITY_ID: The ID of the city for which you want weather data.
     -- How to find it:
@@ -33,7 +33,7 @@ API_KEY = os.getenv("OWM_API_KEY") or "your_default_api_key_here"
     -- 2. Search for your city, e.g., "Amsterdam".
     -- 3. Check the URL in your browser, e.g., https://openweathermap.org/city/2759794.
     -- 4. The number at the end (2759794 for Amsterdam) is your CITY_ID.
-CITY_ID = "2759794"
+CITY_ID = "2877439"
 
     -- UNITS: Temperature unit for the weather data.
     -- Options:
@@ -54,7 +54,7 @@ UNITS = "metric"
     -- 4. Replace "de" with your language code and update the translations.
     -- 5. Save and reload Conky to apply changes.
     -- Current supported languages: "nl", "en", "fr", "es". Fallback is English.
-LANG = "en"
+LANG = "de"
 
 border_COLOR = "0,0xaa0000,1.00,0.5,0xffa5a5,1.00,1,0xaa0000,1.00"
 bg_COLOR = "0x1d1e28,0.75"
