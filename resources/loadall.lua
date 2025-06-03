@@ -3,7 +3,7 @@
 -- june 8 2024
 
 -- Set the path to the scripts foder
-package.path = "./resources/?.lua"
+package.path = "~/conky_colors/resources/?.lua"
 -- ###################################
 
 require 'display'
