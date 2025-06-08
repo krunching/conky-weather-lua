@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 cd "$(dirname "$0")"
@@ -8,9 +9,9 @@ if pidof conky > /dev/null; then
 fi
 
 # Start Conky met de juiste configuratie en log fouten
-conky -c ./conky.conf &
+conky -c ./conky_colors/conkyrc &
 sleep 2
 sh Clock/start.sh
-sleep 5 && conky -c ~/conky_colors/conky_colors/conkyrc;
-#sleep 5 && conky -c ~/.conkycolors/conkyrc;
+#sleep 5 && conky -c ~/conky_colors/conky_colors/conkyrc;
+sleep 5 && conky -c ./conky_debug;
 exit 0
